@@ -1,4 +1,4 @@
-# Portfolio Website (Laravel + React)
+# My_Portfolio_v1
 
 This repository contains a React frontend (Vite) and a minimal PHP backend placeholder. Intended final architecture: Laravel backend (API) + React frontend.
 
@@ -13,4 +13,3 @@ Backend (placeholder):
 Design notes:
 - Baby pink palette (#F4C2C2), Poppins font, subtle animations, responsive layout.
 
-Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>

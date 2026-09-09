@@ -45,9 +45,9 @@ const PROJECTS = [
     title: 'My Portfolio',
     desc: 'A personal portfolio website project built to present skills, education, and selected work.',
     language: 'JavaScript',
-    Icon: FaPalette,
+    image: '/assets/projects/portfolio.jpg',
     accent: '#d76d77',
-    url: 'https://github.com/Su-myat-phyu/my-portfolio'
+    url: 'https://github.com/Su-myat-phyu/My_Portfolio_v1'
   },
   {
     title: 'Used Car Sales Portal',
@@ -118,10 +118,14 @@ export default function Projects(){
       <div className="projects-grid">
         {PROJECTS.map(({Icon, ...p})=> (
           <article key={p.url} className="project-card" style={{'--project-accent': p.accent}}>
-            <div className="project-thumb">
-              <div className="project-visual" aria-hidden="true">
-                <Icon />
-              </div>
+            <div className={`project-thumb ${p.image ? 'project-thumb-image' : ''}`}>
+              {p.image ? (
+                <img className="project-image" src={p.image} alt={`${p.title} preview`} />
+              ) : (
+                <div className="project-visual" aria-hidden="true">
+                  <Icon />
+                </div>
+              )}
               <span>{p.language}</span>
             </div>
             <div className="project-body">

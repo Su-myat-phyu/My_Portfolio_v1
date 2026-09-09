@@ -63,13 +63,16 @@ export default function App(){
       </div>
       <LeftBar />
       <main className="main">
-        <section className="section hero-section" id="home">
-          <h1 className="hero-title-frame">
-            <span>Hello, I'm Su Myat Phyu</span>
-          </h1>
+        
+            <h1 className="hero-title-frame">
+              <span>Hello, I'm Su Myat Phyu</span>
+            </h1>
+          <About />
+          <section className="section hero-section" id="home">
+
 
           <p className="hero-intro">
-            Welcome to my portfolio. Watch a quick video introduction to learn how I build modern web apps and solve real-world problems.
+            Watch a quick video introduction to learn how I build modern web apps and solve real-world problems.
           </p>
 
           <div className="video-wrapper">
@@ -83,13 +86,24 @@ export default function App(){
             />
           </div>
         </section>
-
-        <About />
         <Projects />
         <TechStack />
         <Education />
         <Contact />
       </main>
+
+      <footer className="site-footer">
+        <div className="site-footer-inner">
+          <div className="footer-brand-block">
+            <span className="footer-kicker">Portfolio</span>
+            <a className="footer-brand" href="#home">Su Myat Phyu</a>
+          </div>
+
+          <div className="footer-meta">
+            <p className="footer-copy">© 2026 Su Myat Phyu</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

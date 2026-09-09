@@ -15,6 +15,7 @@ import {
   SiJavascript,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
   SiSpringboot,
   SiVercel,
   SiVite
@@ -32,6 +33,7 @@ const STACK = [
   {name: 'Bootstrap', Icon: FaBootstrap, color: '#7952b3'},
   {name: 'JavaScript', Icon: SiJavascript, color: '#f7df1e'},
   {name: 'React', Icon: FaReact, color: '#61dafb'},
+  {name: 'Next.js', Icon: SiNextdotjs, color: '#000000'},
   {name: 'Node', Icon: FaNodeJs, color: '#339933'},
   {name: 'Vite', Icon: SiVite, color: '#646cff'},
   {name: 'MySQL', Icon: SiMysql, color: '#4479a1'},

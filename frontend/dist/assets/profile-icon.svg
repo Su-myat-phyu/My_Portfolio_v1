@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <clipPath id="profile-clip">
+      <circle cx="128" cy="128" r="120" />
+    </clipPath>
+  </defs>
+  <rect width="256" height="256" fill="#F4C2C2" />
+  <image href="/assets/profile.jpg" width="256" height="256" preserveAspectRatio="xMidYMid slice" clip-path="url(#profile-clip)" />
+</svg>

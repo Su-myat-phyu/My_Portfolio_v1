@@ -26,25 +26,21 @@ const PROJECTS = [
   {
     title: 'Music Playlist Generator',
     desc: 'Generate personalized playlists based on users\' mood, genre, and favorite artists.',
-    language: 'Python',
-    Icon: FaMusic,
-    accent: '#7c5cff',
+    image: '/assets/projects/music.jpg',
     url: 'https://github.com/Su-myat-phyu/Music_Playlist_Generator'
   },
 
 
   {
-    title: 'Portfolio',
-    desc: 'A JavaScript portfolio project showcasing personal profile, work, and frontend presentation.',
-    language: 'JavaScript',
-    Icon: FaLaptopCode,
-    accent: '#f4b400',
-    url: 'https://github.com/Su-myat-phyu/portfolio'
+    title: 'LifeSync',
+    desc: 'A dynamic lifestyle application focused on enhancing overall well-being through fitness, nutrition, and mental health support.',
+    image: '/assets/projects/lifesync.jpg',
+    accent: '#d76d77',
+    url: 'https://github.com/Su-myat-phyu/LifeSync'
   },
   {
     title: 'My Portfolio',
     desc: 'A personal portfolio website project built to present skills, education, and selected work.',
-    language: 'JavaScript',
     image: '/assets/projects/portfolio.jpg',
     accent: '#d76d77',
     url: 'https://github.com/Su-myat-phyu/My_Portfolio_v1'
@@ -52,25 +48,28 @@ const PROJECTS = [
   {
     title: 'Used Car Sales Portal',
     desc: 'A PHP-based portal for browsing, managing, and presenting used car sales information.',
-    language: 'PHP',
-    Icon: FaCarSide,
+    image: '/assets/projects/usedcar.jpg',
     accent: '#2f80ed',
     url: 'https://github.com/Su-myat-phyu/Used_Car_Sales_Portal'
   },
   {
     title: 'Meals On Wheels',
     desc: 'A PHP web application concept for meal service coordination and community support workflows.',
-    language: 'PHP',
-    Icon: FaUtensils,
+    image: '/assets/projects/mealsonwheels.jpg',
     accent: '#f2994a',
     url: 'https://github.com/Su-myat-phyu/Meals-On-Wheels'
   },
   {
+    title: 'JumpStart',
+    desc: 'A fashion retail platform that generates AI product descriptions using user input and image upload.',
+    image: '/assets/projects/jumpstart.jpg',
+    accent: '#f2994a',
+    url: 'https://github.com/Su-myat-phyu/JumpStart'
+  },
+  {
     title: 'DoBu Martial Arts',
     desc: 'An HTML website project for a martial arts brand with structured pages and service information.',
-    language: 'HTML',
-    Icon: FaDumbbell,
-    accent: '#eb5757',
+    image: '/assets/projects/dobu.jpg',
     url: 'https://github.com/Su-myat-phyu/DoBu-Martial-Arts'
   },
   {
@@ -100,9 +99,7 @@ const PROJECTS = [
   {
     title: 'In A Box By Su',
     desc: 'An HTML website project presenting a compact branded web experience.',
-    language: 'HTML',
-    Icon: FaBoxOpen,
-    accent: '#56ccf2',
+    image: '/assets/projects/inabox.jpg',
     url: 'https://github.com/Su-myat-phyu/in-a-box-by-su'
   }
 ]

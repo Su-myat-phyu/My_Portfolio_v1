@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaGraduationCap } from 'react-icons/fa'
 
 const EDUCATION = [
   {
@@ -26,24 +25,29 @@ const EDUCATION = [
 
 export default function Education(){
   return (
-    <section className="section education-section" id="education">
-      <div className="section-heading">
-        <h2>Education</h2>
-      </div>
+    <section id="education" className="education-section">
+      <div className="wrap">
+        <div className="section-heading">
+          <h2>Education</h2>
+          <p>My academic path, from foundation studies to a computer science degree.</p>
+        </div>
 
-      <div className="education-timeline">
-        {EDUCATION.map((item, index) => (
-          <article className="education-card" key={`${item.year}-${item.degree}`} style={{'--delay': `${index * 0.12}s`}}>
-            <div className="education-year">{item.year}</div>
-            <div className="education-marker" aria-hidden="true">
-              <FaGraduationCap />
-            </div>
-            <div className="education-content">
-              <h3>{item.degree}</h3>
-              <p>{item.school}</p>
-            </div>
-          </article>
-        ))}
+        <div className="education-timeline">
+          {EDUCATION.map((item, index) => (
+            <article
+              className="education-item"
+              key={`${item.year}-${item.degree}`}
+              style={{ '--delay': `${index * 120}ms` }}
+            >
+              <div className="education-year">{item.year}</div>
+              <div className="education-marker" aria-hidden="true" />
+              <div className="education-card">
+                <h3>{item.degree}</h3>
+                <p>{item.school}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )

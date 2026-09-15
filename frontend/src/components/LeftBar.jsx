@@ -1,28 +1,47 @@
 import React from 'react'
-import { FaCode, FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaFileAlt } from 'react-icons/fa'
 
-export default function LeftBar(){
-  const links = [
-    {href:'https://github.com/Su-myat-phyu', label:'Open GitHub profile', content:<FaGithub />},
-    {href:'https://www.linkedin.com/in/su-myat-phyu-5a539926a/', label:'Open LinkedIn profile', content:<FaLinkedin />},
-    {href:'https://www.instagram.com/su_m_phyu/', label:'Open Instagram profile', content:<FaInstagram />},
-    {href:'mailto:sumyatphyu2422004@gmail.com', label: 'Open Email', content:<FaEnvelope />}
-  ]
+const LINKS = [
+  { href: '#about', label: 'About' },
+  { href: '#education', label: 'Education' },
+  { href: '#techstack', label: 'Tech Stack' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#contact', label: 'Contact' }
+]
 
+export default function LeftBar({ open, onNavigate }){
   return (
-    <aside className="left-bar" aria-label="Social and quick links">
-      {links.map(link => (
-        <a
-          key={link.label}
-          className="icon"
-          href={link.href}
-          aria-label={link.label}
-          target={link.href.startsWith('http') ? '_blank' : undefined}
-          rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
-        >
-          {link.content}
+    <aside className={`leftbar ${open ? 'leftbar-open' : ''}`}>
+      <div className="leftbar-profile">
+        <img src="/assets/profile.jpg" alt="Su Myat Phyu" className="leftbar-photo" />
+        <h1>Su Myat Phyu</h1>
+        <p>Full-Stack Developer</p>
+      </div>
+
+      <nav className="leftbar-nav">
+        <ul>
+          {LINKS.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={onNavigate}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div className="leftbar-footer">
+        <a className="leftbar-resume" href="/resume.html" target="_blank" rel="noreferrer">
+          <FaFileAlt aria-hidden="true" /> View Resume
         </a>
-      ))}
+        <a
+          className="leftbar-social"
+          href="https://github.com/Su-myat-phyu"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub profile"
+        >
+          <FaGithub aria-hidden="true" />
+        </a>
+      </div>
     </aside>
   )
 }

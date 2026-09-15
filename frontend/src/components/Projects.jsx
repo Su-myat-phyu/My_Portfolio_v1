@@ -107,40 +107,42 @@ const PROJECTS = [
 export default function Projects(){
   return (
     <section className="section" id="projects">
-      <div className="section-heading">
-        <h2>Projects</h2>
-        
-      </div>
+      <div className="wrap">
+        <div className="section-heading">
+          <h2>Projects</h2>
+          <p>Selected work across web apps, AI tools, and practical software projects.</p>
+        </div>
 
-      <div className="projects-grid">
-        {PROJECTS.map(({Icon, ...p})=> (
-          <article key={p.url} className="project-card" style={{'--project-accent': p.accent}}>
-            <div className={`project-thumb ${p.image ? 'project-thumb-image' : ''}`}>
-              {p.image ? (
-                <img className="project-image" src={p.image} alt={`${p.title} preview`} />
-              ) : (
-                <div className="project-visual" aria-hidden="true">
-                  <Icon />
-                </div>
-              )}
-              <span>{p.language}</span>
-            </div>
-            <div className="project-body">
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
-              <a className="project-link" href={p.url} target="_blank" rel="noreferrer">
-                <FaGithub aria-hidden="true" />
-                View on GitHub
-              </a>
-            </div>
-          </article>
-        ))}
-      </div>
+        <div className="projects-grid">
+          {PROJECTS.map(({Icon, ...p})=> (
+            <article key={p.url} className="project-card" style={{'--project-accent': p.accent}}>
+              <div className={`project-thumb ${p.image ? 'project-thumb-image' : ''}`}>
+                {p.image ? (
+                  <img className="project-image" src={p.image} alt={`${p.title} preview`} />
+                ) : (
+                  <div className="project-visual" aria-hidden="true">
+                    <Icon />
+                  </div>
+                )}
+                {p.language && <span>{p.language}</span>}
+              </div>
+              <div className="project-body">
+                <h3>{p.title}</h3>
+                <p>{p.desc}</p>
+                <a className="project-link" href={p.url} target="_blank" rel="noreferrer">
+                  <FaGithub aria-hidden="true" />
+                  View on GitHub
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
 
-      <div className="projects-actions">
-        <a className="projects-all-link" href="https://github.com/Su-myat-phyu?tab=repositories" target="_blank" rel="noreferrer">
-          View all projects on GitHub
-        </a>
+        <div className="projects-actions">
+          <a className="projects-all-link" href="https://github.com/Su-myat-phyu?tab=repositories" target="_blank" rel="noreferrer">
+            View all projects on GitHub
+          </a>
+        </div>
       </div>
     </section>
   )
